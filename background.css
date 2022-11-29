@@ -1,5 +1,5 @@
 html {
-    height: 300%;
+    height: 160%;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     overflow: hidden;
 }
@@ -61,7 +61,8 @@ html {
 #container {
     position: fixed;
     top: 20%;
-    left: 0;
+    width: 70%;
+    left: 15%;
     right: 0;
     color: #FFF;
     text-align: center;
@@ -70,7 +71,6 @@ html {
     font-size: 50px;
     letter-spacing: 10px;
     margin-top: -60px;
-    padding-left: 10px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -89,19 +89,28 @@ html {
     -webkit-text-fill-color: transparent;
 }
 
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 main span {
     background: -webkit-linear-gradient(white, #38495a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 #skills {
     list-style: none;
-    font-size: 30px;
+    font-size: 33px;
     padding: 0;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
 }
 
 #skills li {
@@ -109,7 +118,7 @@ main span {
     background: -webkit-linear-gradient(white, #38495a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    max-width: 20%;
+    width: max-content;
 }
 
 #skills li::before {
