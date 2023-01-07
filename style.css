@@ -12,7 +12,6 @@ body {
 a {
   display: block;
   text-decoration:none;
-  margin-bottom: 1.2em;
   position: relative;
 }
 
@@ -22,15 +21,6 @@ a:hover {
 }
 
   /* Этим свойством добавляем подчеркивание через создание псевдокласса */
-a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  transform: translateY(1.5em);
-  border-bottom: 1px solid #dadada;
-  width: 300px;
-}
 
 h1 {
   font-size: 2em;

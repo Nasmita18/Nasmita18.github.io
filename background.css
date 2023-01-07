@@ -60,8 +60,9 @@ html {
 
 #container {
     position: fixed;
-    top: 20%;
+    top: 15%;
     width: 70%;
+    height: 87vh;
     left: 15%;
     right: 0;
     color: #FFF;
@@ -93,6 +94,12 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+main::-webkit-scrollbar { 
+    display: none;
 }
 
 main span {
@@ -125,7 +132,7 @@ main span {
     display: inline-flex;
     content: '';
     margin-right: 10px;
-    background-image: url('star-svgrepo-com.svg');
+    background-image: url('img/star-svgrepo-com.svg');
     background-size: 20px 20px;
     height: 20px;
     width: 20px;
@@ -136,26 +143,104 @@ main span {
     display: inline-flex;
     content: '';
     margin-right: 10px;
-    background-image: url('star-filled.svg');
+    background-image: url('img/star-filled.svg');
     background-size: 20px 20px;
     height: 20px;
     width: 20px;
     transition: 0.3s;
 }
 
+#projects {
+    list-style: none;
+    font-size: 30px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+#projects li {
+    margin-bottom: 6px;
+    background: -webkit-linear-gradient(white, #38495a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: max-content;
+    padding: 10px 20px;
+    transition: all 2s ease;
+}
+
+.project_item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#projects li:hover .project_item .project_text span {
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 2s;
+}
+
+#projects li:hover .project_item #bot_icon {
+    background-image: url('img/bot_filled.svg');
+    background-size: 80px 80px;
+    height: 80px;
+    width: 80px;
+}
+
+.project_desc {
+    font-size: 20px;
+}
+
+#bot_icon {
+    background-image: url('img/bot.svg');
+    background-size: 80px 80px;
+    height: 80px;
+    width: 80px;
+}
+
+#game_icon {
+    background-image: url('img/controller.svg');
+    background-size: 80px 80px;
+    height: 80px;
+    width: 80px;
+}
+
+#projects li:hover .project_item #game_icon {
+    background-image: url('img/controller_filled.svg');
+    background-size: 80px 80px;
+    height: 80px;
+    width: 80px;
+}
+
+.project_text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
 #star_button {
     background: none;
+    position: fixed;
     border: none;
-    background-image: url(star_button.svg);
+    background-image: url(img/star_button.svg);
     background-size: 60px 60px;
     width: 60px;
     height: 60px;
     transition: 0.3s;
+    right: 50px;
+    top: 50px;
 }
 
 #star_button:hover {
     cursor: pointer;
-    background-image: url(star-filled_button.svg);
+    background-image: url(img/star-filled_button.svg);
     background-size: 60px 60px;
     transition: 0.3s;
 }
@@ -168,7 +253,7 @@ footer {
 }
 
 #tg {
-    background: url("tg.svg") no-repeat center;
+    background: url("img/tg.svg") no-repeat center;
     background-size: contain;
     width: 50px;
     height: 50px;
@@ -177,7 +262,7 @@ footer {
 }
 
 #tg:hover {
-    background: url("tg-filled.svg") no-repeat center;
+    background: url("img/tg-filled.svg") no-repeat center;
     background-size: contain;
     width: 50px;
     height: 50px;
@@ -189,7 +274,7 @@ footer {
 }
 
 #mail {
-    background: url("mail.svg") no-repeat center;
+    background: url("img/mail.svg") no-repeat center;
     background-size: contain;
     width: 50px;
     height: 50px;
@@ -198,7 +283,7 @@ footer {
 }
 
 #mail:hover {
-    background: url("mail-filled.svg") no-repeat center;
+    background: url("img/mail-filled.svg") no-repeat center;
     background-size: contain;
     width: 50px;
     height: 50px;
@@ -210,7 +295,7 @@ footer {
 }
 
 #phone {
-    background: url("phone.svg") no-repeat center;
+    background: url("img/phone.svg") no-repeat center;
     background-size: contain;
     width: 50px;
     height: 50px;
@@ -219,7 +304,7 @@ footer {
 }
 
 #phone:hover {
-    background: url("phone-filled.svg") no-repeat center;
+    background: url("img/phone-filled.svg") no-repeat center;
     background-size: contain;
     width: 50px;
     height: 50px;
