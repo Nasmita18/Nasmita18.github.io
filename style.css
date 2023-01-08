@@ -15,6 +15,10 @@ a {
   position: relative;
 }
 
+span {
+  letter-spacing: 8px;
+}
+
   /* Что делать при наведении на ссылку */
 a:hover {
   color:rgb(104, 104, 105);

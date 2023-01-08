@@ -4,6 +4,7 @@ html {
     overflow: hidden;
 }
 
+
 #stars {
     width: 1px;
     height: 1px;
@@ -75,6 +76,7 @@ html {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center;
 }
 
 #container header {
@@ -94,8 +96,9 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
-    overflow: auto;
-    scrollbar-width: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: fit-content;
 }
 
 main::-webkit-scrollbar { 
